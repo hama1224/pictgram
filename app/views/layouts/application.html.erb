@@ -7,6 +7,8 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   </head>
 
  <body>
@@ -22,9 +24,9 @@
         <ul class="nav navbar-nav navbar-right">
           <% if logged_in? %>
             <li>
-              <%= link_to "#" do %>
-                <%= image_tag "icons/heart.png" %>
-              <% end %>
+              <%= link_to favorites_index_path do %>
+              <%= image_tag 'icons/heart.png' %>
+            <% end %>
             </li>
             <li>
               <%= link_to new_topic_path do %>
